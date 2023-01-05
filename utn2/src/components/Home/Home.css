@@ -1,0 +1,11 @@
+/* pondriamos las propiedades CSS que necesitamos*/
+
+@media ( max-width:768px){
+    ul{
+        flex-direction: column ;
+    }
+}
+
+li{
+    color: blue;
+}

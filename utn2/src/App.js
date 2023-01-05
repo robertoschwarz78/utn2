@@ -1,14 +1,12 @@
+import Home from './components/Home/Home.js'
+//import Home from './components/characters/characters.js'
+//import Router from './components/router/router.js'
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-        ROBERTO
-        </p>
-      </header>
-    </div>
+    <Home />
   );
 }
 

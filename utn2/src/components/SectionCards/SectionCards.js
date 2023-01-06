@@ -1,5 +1,5 @@
-import Card from "../Card/Card";
 import './SectionCards.css'
+import Card from "../Card/Card";
 
 export default function SectionCards({datos}) {
     return(

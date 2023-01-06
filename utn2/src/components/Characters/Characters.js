@@ -10,66 +10,41 @@ export default function Characters() {
     let [infoCompleta,setInfoCompleta]=useState([]);
  
     const mostrarValor =(event)=>{
-            setDatos(infoCompleta)
-    }
 
-    const traerInfo=async()=>{
-        let info= await fetch("https://rickandmortyapi.com/api/character")
-                        .then(respuesta => respuesta.json())
-                        .catch(error => console.log("HAY UN ERROR!!" +error))
-        return info
-        
-    }
+        // se fija si esta o no checked
+        // aca el tema es que cada vez se va achicando mas el set de datos. si uno marca mujer y luego hombre, queda vacio.
+        // en el caso de desactivar la funcion de "origin unknown" salta al "else" y ahi usa todos los datos nuevamente.
 
-    return(
-        <Fragment>
-            <Navegation/>
-        <p>
-            Personajes
-        </p>
-        </Fragment>
-    )
-}
 
-/*
-export default function Characters() {
-    let [datos,setDatos]=useState([]);
-    let [infoCompleta,setInfoCompleta]=useState([]);
- 
-    const mostrarValor =(event)=>{
-
-        // se fija si esta o no checked,tildado
         if(event.target.checked){
-                let datoFiltro=event.target.value;
-                if(datoFiltro === "Alive" || datoFiltro === "Dead"){
-                let resultado= datos.filter((ch)=> ch.status === datoFiltro)//nuevo array con solo los elementos que cumplen la condicion
-                    setDatos(resultado)
-                }
-                if(datoFiltro === "Female" || datoFiltro === "Male"){
-                    let resultado= datos.filter((ch)=> ch.gender === datoFiltro)
-                    setDatos(resultado)
-                }
-                if(datoFiltro === "unknown"){
-                    let resultado= datos.filter((ch)=> ch.origin.name === datoFiltro)
-                    setDatos(resultado)
-                } 
+            let datoFiltro=event.target.value;
+            if(datoFiltro === "Alive" || datoFiltro === "Dead"){
+            let resultado = datos.filter((ch)=> ch.status === datoFiltro) //nuevo array con solo los elementos que cumplen la condicion
+                setDatos(resultado)
+            }
+            if(datoFiltro === "Female" || datoFiltro === "Male"){
+                let resultado = datos.filter((ch)=> ch.gender === datoFiltro)
+                setDatos(resultado)
+            }
+            if(datoFiltro === "unknown"){
+                let resultado = datos.filter((ch)=> ch.origin.name === datoFiltro)
+                setDatos(resultado)
+            } 
                 
-         }else{
+        } else {
             setDatos(infoCompleta)
-         }
+        }
     }
-
-    const traerInfo=async()=>{
- 
-        let info= await fetch("https://rickandmortyapi.com/api/character")
+    const traerInfo = async()=>{
+        let info = await fetch("https://rickandmortyapi.com/api/character")
                         .then(respuesta => respuesta.json())
                         .catch(error => console.log("HAY UN ERROR!!" +error))
         return info
-        
     }
 
-      //saco la funcion por fuera para que lo pueda utilizar en mi funcion del evento
-    const mostarInfo =async ()=>{
+
+    //saco la funcion por fuera para que lo pueda utilizar en mi funcion del evento
+    const mostarInfo = async ()=>{
         let dato= await traerInfo()
         let infoPersonajes= dato.results
         console.log(infoPersonajes)
@@ -77,12 +52,11 @@ export default function Characters() {
         setInfoCompleta(infoPersonajes)
     }
     //Se ejecuta cuando se renderiza la pagina
-     useEffect(()=>{
+    useEffect(()=>{
         mostarInfo() 
      },[])
-
-
-    return(
+    
+     return(
         <Fragment>
             <Navegation />
             <section className='bg-success d-flex p-2'>
@@ -97,6 +71,5 @@ export default function Characters() {
             <SectionCards datos={datos} />
         </Fragment>
     )
+   
 }
-
-*/

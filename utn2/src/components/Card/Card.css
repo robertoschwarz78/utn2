@@ -1,0 +1,21 @@
+.card{
+    width: fit-content !important;
+    background-color: #223142 !important;
+    color:whitesmoke;
+    border-radius: 8px;
+}
+.card>img{
+    width: 100%;
+}
+
+.list-group-item{
+    color: whitesmoke !important;
+    background-color: transparent !important;
+}
+
+.btn {
+    background-color: #6ECCAF !important;
+    color: #344D67!important;
+    
+    /* width: fit-content; */
+}

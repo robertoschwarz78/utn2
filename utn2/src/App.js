@@ -1,12 +1,12 @@
 import Home from './components/Home/Home.js'
-//import Home from './components/characters/characters.js'
-//import Router from './components/router/router.js'
+import Router from './router/Router.js'
+//import Characters from './components/characters/characters.js'
 
 import './App.css';
 
 function App() {
   return (
-    <Home />
+    <Router />
   );
 }
 

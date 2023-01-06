@@ -1,6 +1,32 @@
 ul{
     list-style-type: none;
 }
-header{
+
+h1{
+    width: 600px;  
     padding: 20px;
+    color: #6ECCAF;
+    font-size: large;
+}
+
+nav{
+    width: 600px;  
+    padding: 16px!important;
+    color: #344D67;
+}
+
+.nav-link {
+    color: #6ECCAF;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    color: #344d67;
+    background-color: #6ECCAF !important;
+}
+
+.bg-blue{
+    background-color:#344d67;
+    position: fixed;
+    top: 0%;
 }

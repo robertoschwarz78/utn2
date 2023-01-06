@@ -5,15 +5,16 @@ import ListItemHome from "../ListItemHome/ListItemHome.js";
 export default function Home() {
 
     return(
-        <header className="bg-primary">
-        <h1 >Proyect - Rick & Morty</h1>
-        <nav className="navbar">
-            <ul className="d-flex justify-content-between">
-                Lista de links:
-                <ListItemHome dato="Characters" infoPath="/characters"/>
-                <ListItemHome dato="Contact" infoPath="/contact"/>
-            </ul>
-        </nav>
+        <header className="home-arriba container-fluid d-flex flex-column justify-content-center align-items-center">
+            <div className="home-recuadro d-flex flex-column justify-content-center">
+                <h1 className="h1-home row justify-content-center">
+                    Proyecto - Rick & Morty
+                </h1>
+                <div className="home-fila-botones align-items-center">
+                        <ListItemHome dato="Personajes" infoPath="/characters"/>
+                        <ListItemHome dato="Contacto" infoPath="/contact"/>
+                </div>
+            </div>
         </header>
  
     )

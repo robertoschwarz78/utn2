@@ -5,30 +5,30 @@ import Navegation from '../Navegation/Navegation.js'
 export default function Contact(){
     return(
         <Fragment>
-            <Navegation/>
-            <main className="main-contact-div">
-                <h2>Contact</h2>
-                <h3>Leave us your information so we can contact you</h3>
-                <form className="row g-3 mx-4" action=''>
+        <Navegation/>
+        <main className="main-contact"> 
+            <div className="main-contact-div d-flex flex-column justify-content-center align-items-center m-auto mt-5 w-75 h-75">
+                <h2>Formulario de Contacto</h2>
+                <h3>A continuación puede dejarnos sus comentarios</h3>
+                <form className="row g-3 p-4" action='' id="contactForm">
                     <div className="col-md-6">
                         <label htmlFor="nombre" className="form-label">Nombre</label>
                         <input type="text" className="form-control" id="nombre" />
-
                     </div>
                     <div className="col-md-6">
-                        <label htmlFor="correo" className="form-label">Email</label>
+                        <label htmlFor="correo" className="form-label">E-mail</label>
                         <input type="email" className="form-control" id="correo" />
                     </div>  
-                    <div className="col-12">
+                    <div className="col-md-12">
                         <label htmlFor="mensaje" className="form-label">Mensaje</label>
-                        <textarea id="mensaje" className="form-control"></textarea>
+                        <textarea name="comment" id="mensaje" className="form-control" form="contactForm"></textarea>
                     </div>
-                    
                     <div className="col-12">
-                    <button type="submit" className="btn btn-primary">Send</button>
+                        <button type="submit" className="btn boton-form colorW">Enviar</button>
                     </div>
                 </form>
-           </main>
+           </div>
+        </main>
         </Fragment>
         
     )

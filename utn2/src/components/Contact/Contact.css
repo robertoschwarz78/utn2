@@ -1,6 +1,31 @@
+.main-contact{
+    height: 100vh;
+    margin-top: 150px;
+}
 
 .main-contact-div{
     background-color: #5c7592e6;
+    color: #223142;
 }
 
 /*  #5c7592e6 equivale a rgba(92, 117, 146,0.9) */
+
+.boton-form{
+    background-color:#344D67!important;
+    border-radius: .375em;
+}
+.boton-forms:hover {
+    background-color: #6ECCAF !important;
+    color: #344D67!important;
+    width: fit-content;
+}
+
+.colorW{
+    color: whitesmoke !important;
+}
+
+/* .bg-blue{
+    background-color:#344d67;
+    position: fixed;
+    top: 0%;
+} */

@@ -20,7 +20,7 @@ export default function Card({info}) {
                 <img src={info.image} alt={info.name}/>
                 <h2 >{info.name}</h2>
                 <button onClick={mostrarInfo} className={ ocultar === true ? "btn" : "d-none"}>
-                    More info...
+                    Más info...
                 </button>  
             </div>
             {ocultar == false?

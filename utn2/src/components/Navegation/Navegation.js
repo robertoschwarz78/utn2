@@ -3,22 +3,25 @@ import './Navegation.css';
 
 export default function Navegation() {
     return(
-       <header className="d-flex bg-secondary">
-            <h1>Rick & Morty </h1>
-            <nav>
-                <ul className="d-flex">
-                    <li className="mx-2"> 
-                        <Link to="/">Home</Link>  
-                    </li>
-                    <li className="mx-2">
-                        <Link to="/characters">Characters</Link>
-                    </li>
-                    <li className="mx-2">
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
+       <header>
+            <nav className="navbar navbar-expand-sm w-100 bg-blue">
+                <div className="container-fluid">
+                    <h1>Rick & Morty</h1>
+                    <ul className="navbar-nav nav-pills">
+                        <li className="nav-item"> 
+                            <Link className="nav-link" to="/">Home</Link>  
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/characters">Personajes</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/contact">Contact</Link>
+                        </li>
+                    </ul>
+                </div>
             </nav>
        </header>
     )
 }
 
+/*  className="d-flex bg-secondary gb-blue" */

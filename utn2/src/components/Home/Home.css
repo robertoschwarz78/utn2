@@ -1,11 +1,35 @@
-/* pondriamos las propiedades CSS que necesitamos*/
-
-@media ( max-width:768px){
-    ul{
-        flex-direction: column ;
-    }
+.home-arriba{
+    height: 100vh;
+    /* centrado vertical */
 }
 
-li{
-    color: blue;
+.home-recuadro{
+    background-color: #ffffffe6; /* color del recuadro */
+    height: 500px; /* altura del recuadro */
+}
+
+.h1-home{
+    color: #344D67; /* color y tamaño del texto h1 */
+    font-size: xx-large;
+}
+
+.home-fila-botones {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 140px; /* espacio a los costados de los botones */
+    margin-top: 80px; /* espacio arriba de los botones */
+}
+
+.boton-home {
+    background-color:#344D67!important;
+    color: #6ECCAF;
+    border: 0px;
+    border-radius: 8px;
+    padding: 15px; /* espacio dentro del boton */
+}
+
+.boton-home:hover{
+    /* invierte los colores de texto y fondo */
+    background-color: #6ECCAF !important;
+    color: #344D67;
 }

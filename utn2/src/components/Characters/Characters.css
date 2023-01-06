@@ -1,0 +1,28 @@
+.sector-filtros {
+    /* display: flex;
+    justify-content: space-around;
+    padding: 0 140px; */
+
+    margin-top: 140px;
+    margin-left: 40px;
+    color: #6ECCAF;
+    font-size: xx-large;
+
+}
+
+.filtros {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bg-filtros{
+    /* display: flex; */
+    background-color:#344d67;
+    /* position: float; */
+    border-radius: 8px;
+    /* padding: 5px 40px; */
+    color: #6ECCAF;
+    font-size: medium;
+
+}

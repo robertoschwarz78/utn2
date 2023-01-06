@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import { Fragment } from 'react';
 
+import "./Characters.css";
 import Navegation from '../Navegation/Navegation';
 import Filters from "../Filters/Filters";
 import SectionCards from "../SectionCards/SectionCards";
@@ -59,13 +60,15 @@ export default function Characters() {
      return(
         <Fragment>
             <Navegation />
-            <section className='bg-success d-flex p-2'>
-                <h2>Filters</h2>
-                <Filters nombreFiltro="Character Alive" datoFiltro="Alive" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Character Dead" datoFiltro="Dead" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Female" datoFiltro="Female" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Male" datoFiltro="Male" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Origin Unknown" datoFiltro="unknown" muestraValor={mostrarValor}/> 
+            <section className='sector-filtros'>
+                <h2>Filtros</h2>
+                <div className='filtros d-flex justify-content-between flex-wrap'>
+                    <Filters nombreFiltro="Vivos" datoFiltro="Alive" muestraValor={mostrarValor}/> 
+                    <Filters nombreFiltro="Muertos" datoFiltro="Dead" muestraValor={mostrarValor}/> 
+                    <Filters nombreFiltro="Mujeres" datoFiltro="Female" muestraValor={mostrarValor}/> 
+                    <Filters nombreFiltro="Hombres" datoFiltro="Male" muestraValor={mostrarValor}/> 
+                    <Filters nombreFiltro="Origen desconocido" datoFiltro="unknown" muestraValor={mostrarValor}/> 
+                </div>
             </section>
                           
             <SectionCards datos={datos} />

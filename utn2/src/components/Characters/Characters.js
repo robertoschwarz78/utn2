@@ -2,15 +2,32 @@ import {useEffect, useState} from 'react';
 import { Fragment } from 'react';
 
 import Navegation from '../Navegation/Navegation';
-//import Filters from "../FIlters/Filters";
-//import SectionCards from "../SectionCards/SectionCards";
+import Filters from "../Filters/Filters";
+import SectionCards from "../SectionCards/SectionCards";
 
 export default function Characters() {
+    let [datos,setDatos]=useState([]);
+    let [infoCompleta,setInfoCompleta]=useState([]);
+ 
+    const mostrarValor =(event)=>{
+            setDatos(infoCompleta)
+    }
+
+    const traerInfo=async()=>{
+        let info= await fetch("https://rickandmortyapi.com/api/character")
+                        .then(respuesta => respuesta.json())
+                        .catch(error => console.log("HAY UN ERROR!!" +error))
+        return info
+        
+    }
 
     return(
+        <Fragment>
+            <Navegation/>
         <p>
             Personajes
         </p>
+        </Fragment>
     )
 }
 

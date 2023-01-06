@@ -1,3 +1,4 @@
+import "./Contact.css";
 import { Fragment } from 'react';
 import Navegation from '../Navegation/Navegation.js'
 
@@ -5,7 +6,7 @@ export default function Contact(){
     return(
         <Fragment>
             <Navegation/>
-            <main>
+            <main className="main-contact-div">
                 <h2>Contact</h2>
                 <h3>Leave us your information so we can contact you</h3>
                 <form className="row g-3 mx-4" action=''>

@@ -5,7 +5,6 @@ import ListItemHome from "../ListItemHome/ListItemHome.js";
 export default function Home() {
 
     return(
-          
         <header className="bg-primary">
         <h1 >Proyect - Rick & Morty</h1>
         <nav className="navbar">

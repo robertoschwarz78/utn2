@@ -14,18 +14,21 @@ export default function Card({info}) {
     }
 
     // muestra foto, nombre, boton y/o detalles
+    // bg-primary my-5 d-flex justify-content-between
+    // d-flex justify-content-between flex-wrap
+
     return(
-        <div className="card bg-primary my-5 d-flex justify-content-between">
-            <div>
+        <div className="card flex-row">
+            <div className="card1 d-flex flex-column justify-content-between align-items-center">
                 <img src={info.image} alt={info.name}/>
-                <h2 >{info.name}</h2>
-                <button onClick={mostrarInfo} className={ ocultar === true ? "btn" : "d-none"}>
+                <h2>{info.name}</h2>
+                <button onClick={mostrarInfo} className={ ocultar === true ? "btn align-self-end" : "d-none"}>
                     Más info...
                 </button>  
             </div>
             {ocultar == false?
-                <div>
-                    <button className="btn" onClick={ocularInfo}>X</button>
+                <div className="card2 p-5 flex-column align-items-center">
+                    <button className="btn align-self-end" onClick={ocularInfo}>X</button>
                     <ul className="list-group">
                         <li className="list-group-item">
                             <div className="fw-bold">Character Status</div>

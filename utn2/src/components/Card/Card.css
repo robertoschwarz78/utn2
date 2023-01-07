@@ -1,9 +1,12 @@
 .card{
     width: fit-content !important;
+    padding: .5rem;
     background-color: #223142 !important;
     color:whitesmoke;
     border-radius: 8px;
+    margin: 5px;
 }
+
 .card>img{
     width: 100%;
 }

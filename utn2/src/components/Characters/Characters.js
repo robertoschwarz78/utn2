@@ -48,7 +48,7 @@ export default function Characters() {
     const mostarInfo = async ()=>{
         let dato= await traerInfo()
         let infoPersonajes= dato.results
-        console.log(infoPersonajes)
+        // console.log(infoPersonajes)
         setDatos(infoPersonajes)
         setInfoCompleta(infoPersonajes)
     }
